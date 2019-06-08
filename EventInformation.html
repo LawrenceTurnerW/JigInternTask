@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>福井県のイベント情報</title>
+
+  <!--各種scriptの読み込み-->
+  <script src="C:\Users\Takafumi\git\JigTask\vue.js"></script>
+  <script src="node_modules\vue-tables-2\dist\vue-tables.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <!--sccとbootstrapの読み込み-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+  <h1 class="vue-title">福井県のイベント情報</h1>
+  <div id="app">
+    <p>イベント名の左の+をクリックすると詳細を開きます。</p>
+    <v-client-table :columns="columns" :data="data" :options="options">
+      <!--子行の記述-->
+      <div slot="child_row" slot-scope="props">
+        説明：{{props.row.description}}<br>
+        備考：{{props.row.remarks}}<br>
+        主催：{{props.row.contact}}<br>
+        イベント会場URL：<a :href = "props.row.event_place_url">
+          {{props.row.event_place_url}}
+        </a><br>
+        住所：{{props.row.address}}<br>
+        アクセス：{{props.row.transportation}}<br>
+        メールアドレス：{{props.row.mail_address}}<br>
+        電話番号：{{props.row.contact_phone_number}}<br>
+      </div>
+    </v-client-table>
+  </div>
+<script src="index.js"></script>
+</body>
+</html>
