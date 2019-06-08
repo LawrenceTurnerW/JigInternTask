@@ -1,0 +1,35 @@
+.vue-title {
+  font-size: 50px;
+  text-align: center;
+  margin: 20px  0px;
+}
+
+#app {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*表選択タブ*/
+.VueTables__columns-dropdown {
+  float: right;
+}
+.col-md-12{
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*詳細タブ関連*/
+.VueTables__child-row-toggler {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.VueTables__child-row-toggler--closed::before {content: "+";}
+.VueTables__child-row-toggler--open::before {content: "-";}
