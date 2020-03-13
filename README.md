@@ -30,4 +30,4 @@
 2019.06.7   大体完成したので細かい部分を整える
 2019.06.8   Githubと格闘してどうにかオンラインで表示できるようにする
 
-https://lawrenceturnerw.github.io/
+https://lawrenceturnerw.github.io/jiginterntask/.
